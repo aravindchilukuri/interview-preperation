@@ -4,7 +4,6 @@
 
 // console.log(reverseOfString('Aravind'))
 
-
 // function reverseString(str) {
 //     var revStr = '';
 //     for(var i = str.lenght - 1 ; i >=0 ; i--) {
@@ -15,7 +14,6 @@
 
 //  ----------------------------
 // Reverse of words
-
 
 // function ReverseWords(str) {
 //     var words = [];
@@ -30,12 +28,19 @@
 // console.log(ReverseWords('Aravind chilukuri'))
 // console.log(reverseString('aravindchilukuri'))
 
-
-
 /* ------ Reverse in place ---- */
 
-function reverseInPlace(str) {
-    return str.split(' ').reverse().join(' ').split('').reverse().join('');
-}
+// function reverseInPlace(str) {
+//   return str.split(" ").reverse().join(" ").split("").join("");
+// }
 
-console.log(reverseInPlace('ABCDE  FGHIJK'))
+// console.log(reverseInPlace("ABCDE  FGHIJK"));
+
+function reverse(str) {
+  let len = str.length;
+  if (str.length === len) {
+    return;
+  }
+
+  return reverse(str[])
+}

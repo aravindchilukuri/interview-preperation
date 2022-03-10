@@ -6,7 +6,7 @@ let multiply = function (x, y) {
 
 let multiplyTwo = multiply.bind(this, 2);
 
-// multiplyTwo(5)
+multiplyTwo(5);
 
 /** function closure method */
 
@@ -22,7 +22,7 @@ let mulitplyClos = function (x) {
 
 let multiplyTwoClos = mulitplyClos(2);
 
-// multiplyTwoClos(4)
+multiplyTwoClos(4);
 
 /**sum(1)(2)(3)....(n)() */
 
@@ -34,7 +34,7 @@ let sum = (a) => (b) => b ? sum(a + b) : a;
 // the property which has property of another methods
 //example
 
-/**Event Bubbling & Capuring */
+/**Event Bubbling & Caputring */
 
 /** Debouncing */
 let counter = 0;
@@ -95,7 +95,7 @@ console.log(a) // the temporal dead zone ends after
 var b = 100;
 */
 
-/**closure function with it lexal scope bundled together     */
+/**closure function with it lexical scope bundled together     */
 
 function a() {
   var a = 10;
@@ -108,6 +108,14 @@ function a() {
 a();
 
 /** Reduce  */
+
+/**  The reduce() method executes a reducer function for each value of an array.
+
+ reduce() returns a single value which is the function's accumulated result.
+
+reduce() does not execute the function for empty array elements.
+
+ reduce() does not change the original array. */
 
 const arr = [5, 2, 1, 3, 2, 1];
 
@@ -125,28 +133,24 @@ const outputMax = arr.reduce((max, curr) => {
   return max;
 }, 0);
 
-
 /**reduce how my values are there with same age */
 
-const user = [ 
-    {firstName:'aravind',age:25},
-    {firstName:'srinadh',age:22},
-    {firstName:'vanshika',age:2},
-    {firstName:'jagannadh',age:25}
-]
+const user = [
+  { firstName: "aravind", age: 25 },
+  { firstName: "srinadh", age: 22 },
+  { firstName: "vanshika", age: 2 },
+  { firstName: "jagannadh", age: 25 },
+];
 
-const outputAge = user.reduce((acc,curr) => {
-    if(acc[curr.age]) {
-        acc[curr.age] = ++acc[curr.age]
-    } else {
-        acc[curr.age] = 1
-    }
-    return acc;
-},{});
+const outputAge = user.reduce((acc, curr) => {
+  if (acc[curr.age]) {
+    acc[curr.age] = ++acc[curr.age];
+  } else {
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
 
-const outputage20 = user.filter((x) => 
-    x.age > 20).map((x) => 
-    x.firstName)
+const outputage20 = user.filter((x) => x.age > 20).map((x) => x.firstName);
 
-
-console.log(outputage20)
+console.log(outputage20);

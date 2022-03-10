@@ -1,28 +1,23 @@
 /* flatten which accepts an array of arrays and retruns a new array with all values flattend --*/
 
 function flatten(arr) {
-let flattenArray = [].concat.apply([],arr)
-// let flattenArrayTwo = arr.flat(1) inbuilt method
-console.log(flattenArrayTwo)
-return flattenArray;
+  let flattenArray = [].concat.apply([], arr);
+  let flattenArrayTwo = arr.flat(1); //inbuilt method
+  // console.log(flattenArrayTwo);
+  return flattenArray;
 }
 
+function customFlattenArray(arr, depth = 3) {
+  let result = [];
 
-
-
-function flatten(oldArr){
-  var newArr = []
-  	for(var i = 0; i < oldArr.length; i++){
-    	if(Array.isArray(oldArr[i])){
-      		newArr = newArr.concat(flatten(oldArr[i]))
-    	} else {
-      		newArr.push(oldArr[i])
-    	}
-  } 
-  return newArr;
+  arr.forEach((ar) => {
+    if (Array.isArray(ar) && depth > 0) {
+      result.push(...customFlattenArray(ar, depth - 1));
+    } else {
+      result.push(ar);
+    }
+  });
+  return result;
 }
 
-
-
-console.log(flatten([1, [2, [3, 4], [[5]]]]))
-
+console.log(customFlattenArray([1, [2, [3, 4], [[5]]]]));

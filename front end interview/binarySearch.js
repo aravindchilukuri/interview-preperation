@@ -8,14 +8,11 @@ function binarySearch(arr, ele) {
     } else {
       start = middle + 1;
     }
-    middle = Math.floor((start + end) / 2);
   }
- if(arr[middle] == ele) {
-   return middle
- }
- return -1
+  if (arr[middle] === ele) {
+    return arr[middle];
+  }
+  return -1;
 }
 
 console.log(binarySearch([40, 100, 1, 5, 25, 10], 100));
-
-

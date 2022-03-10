@@ -1,21 +1,19 @@
-getName() 
+getName();
 console.log(x);
-
-var x = 7
+var x = 7;
 
 function getName() {
-    console.log('welcome')
+  console.log("welcome");
 }
-
-
-
 
 /** gues output */
 
-let x= {}, y = {name:"Ronny"},z = {name:"John"};
+let x = {},
+  y = { name: "Ronny" },
+  z = { name: "John" };
 
-x[y] = {name:"Vivek"};
-x[z] = {name:"Akki"};
+x[y] = { name: "Vivek" };
+x[z] = { name: "Akki" };
 
 console.log(x[y]);
 
@@ -34,14 +32,13 @@ Both x[y] and x[z] are referencing the same property.
 
 var x = 23;
 
-(function(){
+(function () {
   var x = 43;
-  (function random(){
+  (function random() {
     x++;
     console.log(x);
     var x = 21;
   })();
 })();
-
 
 /** Out put is NAN */
